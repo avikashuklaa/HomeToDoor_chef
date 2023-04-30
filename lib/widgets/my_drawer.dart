@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:hometodoor_chef/global/global.dart';
+import 'package:hometodoor_chef/mainScreens/earnings_screen.dart';
+import 'package:hometodoor_chef/mainScreens/history_screen.dart';
+import 'package:hometodoor_chef/mainScreens/new_orders_screen.dart';
 
 import '../authentication/auth_screen.dart';
 import '../mainScreens/home_screen.dart';
@@ -84,7 +87,7 @@ class MyDrawer extends StatelessWidget {
                     ),
                   ),
                   onTap: (){
-
+                    Navigator.push(context, MaterialPageRoute(builder: (c)=>EarningsScreen()));
                   },
                 ),
                 ListTile(
@@ -99,7 +102,7 @@ class MyDrawer extends StatelessWidget {
                     ),
                   ),
                   onTap: (){
-
+                    Navigator.push(context, MaterialPageRoute(builder: (c)=>NewOrdersScreen()));
                   },
                 ),
                 ListTile(
@@ -114,7 +117,7 @@ class MyDrawer extends StatelessWidget {
                     ),
                   ),
                   onTap: (){
-
+                    Navigator.push(context, MaterialPageRoute(builder: (c)=>HistoryScreen()));
                   },
                 ),
                 ListTile(

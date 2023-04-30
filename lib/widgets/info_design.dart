@@ -1,4 +1,7 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
+import 'package:hometodoor_chef/global/global.dart';
 import 'package:hometodoor_chef/mainScreens/itemScreen.dart';
 
 import '../model/menus.dart';
@@ -17,6 +20,16 @@ class InfoDesignWidget extends StatefulWidget {
 }
 
 class _InfoDesignWidgetState extends State<InfoDesignWidget> {
+
+  deleteMenu(String menuID)
+  {
+      FirebaseFirestore.instance.collection("chefs")
+          .doc(sharedPreferences!.getString("uid"))
+          .collection("Menu").doc(menuID).delete();
+
+      Fluttertoast.showToast(msg: "Menu deleted successfully");
+  }
+
   @override
   Widget build(BuildContext context) {
     return InkWell(
@@ -27,7 +40,7 @@ class _InfoDesignWidgetState extends State<InfoDesignWidget> {
       child: Padding(
         padding: EdgeInsets.all(16.0),
         child: Container(
-          height: 295,
+          height: 265,
           width: MediaQuery.of(context).size.width,
           child: Column(
             children: [
@@ -43,18 +56,32 @@ class _InfoDesignWidgetState extends State<InfoDesignWidget> {
               ),
               SizedBox(height: 1.0,
               ),
-              Text(
-                widget.model!.menuTitle!,
-                style: TextStyle(color: Colors.blueGrey,
-                fontSize: 20,
-                fontFamily: "Varela"),
-              ),
-              Text(
-                widget.model!.menuInfo!,
-                style: TextStyle(color: Colors.blueGrey,
-                    fontSize: 12,
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    widget.model!.menuTitle!,
+                    style: TextStyle(color: Colors.blueGrey,
+                    fontSize: 20,
                     fontFamily: "Varela"),
+                  ),
+                  IconButton(
+                    icon: Icon(
+                      Icons.delete_sharp,
+                      color: Colors.grey,
+                    ),
+                    onPressed: (){
+                        deleteMenu(widget.model!.menuID!);
+                    },
+                  ),
+                ],
               ),
+              // Text(
+              //   widget.model!.menuInfo!,
+              //   style: TextStyle(color: Colors.blueGrey,
+              //       fontSize: 17,
+              //       fontFamily: "Varela"),
+              // ),
 
 
             ],

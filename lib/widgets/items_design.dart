@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hometodoor_chef/mainScreens/itemScreen.dart';
+import 'package:hometodoor_chef/mainScreens/item_detail_screen.dart';
 
 import '../model/items.dart';
 import '../model/menus.dart';
@@ -22,7 +23,7 @@ class _ItemsDesignWidgetState extends State<ItemsDesignWidget> {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: (){
-        //Navigator.push(context, MaterialPageRoute(builder: (c) => ItemScreen(model: widget.model)));
+        Navigator.push(context, MaterialPageRoute(builder: (c) => ItemDetailsScreen(model: widget.model)));
       },
       splashColor: Colors.red,
       child: Padding(
