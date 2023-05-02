@@ -35,8 +35,8 @@ class _MenuUploadScreenState extends State<MenuUploadScreen> {
           decoration: const BoxDecoration(
             gradient: LinearGradient(
               colors: [
-                Color(0xffff99c8),
-                Color(0xff023e8a),
+                Color(0xff2ec4b6),
+                Color(0xff2ec4b6),
               ],
               begin: const FractionalOffset(0.0, 0.0),
               end: const FractionalOffset(1.0, 0.0),
@@ -62,10 +62,10 @@ class _MenuUploadScreenState extends State<MenuUploadScreen> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Icon(Icons.shop_2, size: 200.0,),
+              Icon(Icons.shop_2, size: 200.0, color: Color(0xffcce3de),),
               ElevatedButton(
                 style: ButtonStyle(
-                  backgroundColor: MaterialStateProperty.all<Color>(Colors.pink),
+                  backgroundColor: MaterialStateProperty.all<Color>(Color(0xfff6bd60)),
                   shape: MaterialStateProperty.all<RoundedRectangleBorder>
                     (
                       RoundedRectangleBorder(
@@ -94,26 +94,26 @@ class _MenuUploadScreenState extends State<MenuUploadScreen> {
         context: mContext,
         builder: (context){
           return SimpleDialog(
-            title: Text("Menu Image", style: TextStyle(color: Colors.grey, fontWeight: FontWeight.bold),),
+            title: Text("Menu Image", style: TextStyle(color: Color(0xff6b9080), fontWeight: FontWeight.bold),),
             children: [
               SimpleDialogOption(
                 child: Text(
                     "Capture with camera",
-                  style: TextStyle(color: Colors.grey),
+                  style: TextStyle(color: Color(0xffa4c3b2), fontWeight: FontWeight.bold),
                 ),
                 onPressed: captureImageWithCamera,
               ),
               SimpleDialogOption(
                 child: Text(
                   "Pick from gallery",
-                  style: TextStyle(color: Colors.grey),
+                  style: TextStyle(color: Color(0xffa4c3b2), fontWeight: FontWeight.bold),
                 ),
                 onPressed: pickImageFromGallery,
               ),
               SimpleDialogOption(
                 child: Text(
                   "Cancel",
-                  style: TextStyle(color: Colors.grey),
+                  style: TextStyle(color: Color(0xffa4c3b2), fontWeight: FontWeight.bold),
                 ),
                 onPressed: ()=>Navigator.pop(context),
               )
@@ -155,8 +155,8 @@ class _MenuUploadScreenState extends State<MenuUploadScreen> {
             decoration: const BoxDecoration(
               gradient: LinearGradient(
                 colors: [
-                  Color(0xffff99c8),
-                  Color(0xff023e8a),
+                  Color(0xff2ec4b6),
+                  Color(0xff2ec4b6),
                 ],
                 begin: const FractionalOffset(0.0, 0.0),
                 end: const FractionalOffset(1.0, 0.0),
@@ -183,11 +183,10 @@ class _MenuUploadScreenState extends State<MenuUploadScreen> {
                 child: Text(
                   "Add",
                   style: TextStyle(
-                    color: Colors.blue,
+                    color: Color(0xff354f52),
                     fontWeight: FontWeight.bold,
                     fontSize: 18.0,
-                    fontFamily: "Varela",
-                    letterSpacing: 3,
+
                   ),
                 ),
 
@@ -219,7 +218,7 @@ class _MenuUploadScreenState extends State<MenuUploadScreen> {
           ),
 
           ListTile(
-            leading: Icon(Icons.title),
+            leading: Icon(Icons.title, color: Color(0xff83c5be),),
             title: Container(
                 width: 250,
                 child: TextField(
@@ -236,7 +235,7 @@ class _MenuUploadScreenState extends State<MenuUploadScreen> {
            Divider(color: Colors.grey[350],
            thickness: 1,),
            ListTile(
-            leading: Icon(Icons.perm_device_information),
+            leading: Icon(Icons.perm_device_information, color: Color(0xff83c5be),),
              title: Container(
                width: 250,
                child: TextField(

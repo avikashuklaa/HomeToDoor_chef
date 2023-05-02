@@ -61,14 +61,15 @@ class _InfoDesignWidgetState extends State<InfoDesignWidget> {
                 children: [
                   Text(
                     widget.model!.menuTitle!,
-                    style: TextStyle(color: Colors.blueGrey,
+                    style: TextStyle(color: Colors.black,
                     fontSize: 20,
                     fontFamily: "Varela"),
                   ),
+                  SizedBox(width: 50,),
                   IconButton(
                     icon: Icon(
                       Icons.delete_sharp,
-                      color: Colors.grey,
+                      color: Colors.black,
                     ),
                     onPressed: (){
                         deleteMenu(widget.model!.menuID!);

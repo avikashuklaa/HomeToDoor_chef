@@ -28,8 +28,8 @@ class _HomeScreenState extends State<HomeScreen> {
           decoration: const BoxDecoration(
             gradient: LinearGradient(
               colors: [
-                Color(0xffff99c8),
-                Color(0xff023e8a),
+                Color(0xff2ec4b6),
+                Color(0xff2ec4b6),
               ],
               begin: FractionalOffset(0.0, 0.0),
               end: FractionalOffset(1.0, 0.0),
@@ -48,13 +48,15 @@ class _HomeScreenState extends State<HomeScreen> {
               onPressed: (){
                 Navigator.push(context, MaterialPageRoute(builder: (c)=>MenuUploadScreen()));
               },
-              icon: Icon(Icons.post_add))
+              icon: Icon(Icons.post_add),
+          color: Color(0xff354f52),)
         ],
       ),
       body: CustomScrollView(
         slivers: [
           SliverPersistentHeader(pinned: true,
               delegate: TextWidgetHeader(title: "Menu")),
+
           StreamBuilder<QuerySnapshot>(
             stream: FirebaseFirestore.instance.collection("chefs").doc(sharedPreferences!.getString("uid"))
                 .collection("Menu").orderBy("publishedDate", descending: true).
