@@ -32,8 +32,8 @@ class _ItemScreenState extends State<ItemScreen> {
           decoration: const BoxDecoration(
             gradient: LinearGradient(
               colors: [
-                Color(0xffff99c8),
-                Color(0xff023e8a),
+                Color(0xff2ec4b6),
+                Color(0xff2ec4b6),
               ],
               begin: const FractionalOffset(0.0, 0.0),
               end: const FractionalOffset(1.0, 0.0),
@@ -52,7 +52,7 @@ class _ItemScreenState extends State<ItemScreen> {
               onPressed: (){
                 Navigator.push(context, MaterialPageRoute(builder: (c)=>ItemsUploadScreen(model: widget.model)));
               },
-              icon: Icon(Icons.library_add))
+              icon: Icon(Icons.library_add), color: Color(0xff15616d),)
         ],
       ),
       drawer: MyDrawer(

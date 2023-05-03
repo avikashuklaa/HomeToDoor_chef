@@ -36,7 +36,7 @@ class _EarningsScreenState extends State<EarningsScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: Color(0xffeff7f6),
       body: SafeArea(
         child: Center(
           child: Column(
@@ -46,7 +46,7 @@ class _EarningsScreenState extends State<EarningsScreen> {
                 "₹" + sellerTotalEarnings!.toString(),
                 style: TextStyle(
                   fontSize: 70,
-                  color: Colors.white,
+                  color: Color(0xff006d77),
 
                 ),
               ),
@@ -55,7 +55,7 @@ class _EarningsScreenState extends State<EarningsScreen> {
                 "Total Earnings",
                 style: TextStyle(
                     fontSize: 20,
-                    color: Colors.grey,
+                    color: Color(0xff15616d),
                     letterSpacing: 3,
                     fontWeight: FontWeight.bold,
 
@@ -66,7 +66,7 @@ class _EarningsScreenState extends State<EarningsScreen> {
                 height: 15,
                 width: 170,
                 child: Divider(
-                  color: Colors.white54,
+                  color: Color(0xff15616d),
                   thickness: 1.5,
                 ),
               ),
@@ -78,7 +78,7 @@ class _EarningsScreenState extends State<EarningsScreen> {
                   Navigator.push(context, MaterialPageRoute(builder: (c) =>const HomeScreen()));
                 },
                 child: Card(
-                  color: Colors.white54,
+                  color: Color(0xff2ec4b6),
                   margin: EdgeInsets.symmetric(vertical: 40, horizontal: 140),
                   child: ListTile(
                     //leading:

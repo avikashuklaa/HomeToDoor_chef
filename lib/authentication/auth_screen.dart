@@ -20,7 +20,7 @@ class _AuthScreenState extends State<AuthScreen> {
               decoration: const BoxDecoration(
                 gradient: LinearGradient(
                   colors: [
-                    Color(0xffff99c8),
+                    Color(0xff2ec4b6),
                     Color(0xff023e8a),
                   ],
                   begin: const FractionalOffset(0.0, 0.0),
@@ -59,12 +59,13 @@ class _AuthScreenState extends State<AuthScreen> {
           ),
           body: Container(
             decoration: BoxDecoration(
+              //color: Color(0xfff2cc8f)
               gradient: LinearGradient(
                 begin: Alignment.topRight,
                 end: Alignment.bottomLeft,
                 colors: [
-                    Color(0xffff99c8),
-                    Color(0xff023e8a),
+                    Color(0xffcce3de),
+                    Color(0xffcce3de),
                   ]
               ),
             ),

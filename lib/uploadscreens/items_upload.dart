@@ -41,8 +41,8 @@ class _ItemsUploadScreenState extends State<ItemsUploadScreen> {
             decoration: const BoxDecoration(
               gradient: LinearGradient(
                 colors: [
-                  Color(0xffff99c8),
-                  Color(0xff023e8a),
+                  Color(0xff2ec4b6),
+                  Color(0xff2ec4b6),
                 ],
                 begin: const FractionalOffset(0.0, 0.0),
                 end: const FractionalOffset(1.0, 0.0),
@@ -68,10 +68,10 @@ class _ItemsUploadScreenState extends State<ItemsUploadScreen> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Icon(Icons.shop_2, size: 200.0,),
+                  Icon(Icons.shop_2, size: 200.0, color: Color(0xffcce3de),),
                   ElevatedButton(
                       style: ButtonStyle(
-                          backgroundColor: MaterialStateProperty.all<Color>(Colors.pink),
+                          backgroundColor: MaterialStateProperty.all<Color>(Color(0xfff6bd60)),
                           shape: MaterialStateProperty.all<RoundedRectangleBorder>
                             (
                               RoundedRectangleBorder(
@@ -100,26 +100,26 @@ class _ItemsUploadScreenState extends State<ItemsUploadScreen> {
       context: mContext,
       builder: (context){
         return SimpleDialog(
-          title: Text("Menu Image", style: TextStyle(color: Colors.grey, fontWeight: FontWeight.bold),),
+          title: Text("Menu Image", style: TextStyle(color: Color(0xff6b9080), fontWeight: FontWeight.bold),),
           children: [
             SimpleDialogOption(
               child: Text(
                 "Capture with camera",
-                style: TextStyle(color: Colors.grey),
+                style: TextStyle(color: Color(0xffa4c3b2), fontWeight: FontWeight.bold),
               ),
               onPressed: captureImageWithCamera,
             ),
             SimpleDialogOption(
               child: Text(
                 "Pick from gallery",
-                style: TextStyle(color: Colors.grey),
+                style: TextStyle(color: Color(0xffa4c3b2), fontWeight: FontWeight.bold),
               ),
               onPressed: pickImageFromGallery,
             ),
             SimpleDialogOption(
               child: Text(
                 "Cancel",
-                style: TextStyle(color: Colors.grey),
+                style: TextStyle(color: Color(0xffa4c3b2), fontWeight: FontWeight.bold),
               ),
               onPressed: ()=>Navigator.pop(context),
             )
@@ -161,8 +161,8 @@ class _ItemsUploadScreenState extends State<ItemsUploadScreen> {
           decoration: const BoxDecoration(
             gradient: LinearGradient(
               colors: [
-                Color(0xffff99c8),
-                Color(0xff023e8a),
+                Color(0xff2ec4b6),
+                Color(0xff2ec4b6),
               ],
               begin: const FractionalOffset(0.0, 0.0),
               end: const FractionalOffset(1.0, 0.0),
@@ -189,11 +189,9 @@ class _ItemsUploadScreenState extends State<ItemsUploadScreen> {
             child: Text(
               "Add",
               style: TextStyle(
-                color: Colors.blue,
+                color: Color(0xff15616d),
                 fontWeight: FontWeight.bold,
                 fontSize: 18.0,
-                fontFamily: "Varela",
-                letterSpacing: 3,
               ),
             ),
 
@@ -225,7 +223,7 @@ class _ItemsUploadScreenState extends State<ItemsUploadScreen> {
           ),
 
           ListTile(
-            leading: Icon(Icons.title),
+            leading: Icon(Icons.title, color: Color(0xff83c5be),),
             title: Container(
                 width: 250,
                 child: TextField(
@@ -242,7 +240,7 @@ class _ItemsUploadScreenState extends State<ItemsUploadScreen> {
           Divider(color: Colors.grey[350],
             thickness: 1,),
           ListTile(
-            leading: Icon(Icons.perm_device_information),
+            leading: Icon(Icons.perm_device_information, color: Color(0xff83c5be),),
             title: Container(
                 width: 250,
                 child: TextField(
@@ -259,7 +257,7 @@ class _ItemsUploadScreenState extends State<ItemsUploadScreen> {
           Divider(color: Colors.grey[350],
             thickness: 1,),
           ListTile(
-            leading: Icon(Icons.description),
+            leading: Icon(Icons.description, color: Color(0xff83c5be),),
             title: Container(
                 width: 250,
                 child: TextField(
@@ -276,7 +274,7 @@ class _ItemsUploadScreenState extends State<ItemsUploadScreen> {
           Divider(color: Colors.grey[350],
             thickness: 1,),
           ListTile(
-            leading: Icon(Icons.currency_rupee),
+            leading: Icon(Icons.currency_rupee, color: Color(0xff83c5be),),
             title: Container(
                 width: 250,
                 child: TextField(

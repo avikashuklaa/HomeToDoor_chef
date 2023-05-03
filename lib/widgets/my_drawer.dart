@@ -40,9 +40,9 @@ class MyDrawer extends StatelessWidget {
                 Text(
                   sharedPreferences!.getString("name")!,
                   style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 20.0,
-                    fontFamily:"Signatra",
+                    color: Color(0xff354f52),
+                    fontSize: 25.0,
+                    fontFamily:"Lobster",
                   ),
                 )
               ],
@@ -62,7 +62,7 @@ class MyDrawer extends StatelessWidget {
                 ListTile(
                   leading: Icon(
                     Icons.home,
-                    color: Colors.black,
+                    color: Color(0xff006d77),
                   ),
                   title: Text(
                     "Home",
@@ -78,7 +78,7 @@ class MyDrawer extends StatelessWidget {
                 ListTile(
                   leading: Icon(
                     Icons.money,
-                    color: Colors.black,
+                    color: Color(0xff006d77),
                   ),
                   title: Text(
                     "My Earnings",
@@ -93,7 +93,7 @@ class MyDrawer extends StatelessWidget {
                 ListTile(
                   leading: Icon(
                     Icons.reorder,
-                    color: Colors.black,
+                    color: Color(0xff006d77),
                   ),
                   title: Text(
                     "New Orders",
@@ -108,7 +108,7 @@ class MyDrawer extends StatelessWidget {
                 ListTile(
                   leading: Icon(
                     Icons.local_shipping,
-                    color: Colors.black,
+                    color: Color(0xff006d77),
                   ),
                   title: Text(
                     "History-Orders",
@@ -123,7 +123,7 @@ class MyDrawer extends StatelessWidget {
                 ListTile(
                   leading: Icon(
                     Icons.logout,
-                    color: Colors.black,
+                    color: Color(0xff006d77),
                   ),
                   title: Text(
                     "Logout",

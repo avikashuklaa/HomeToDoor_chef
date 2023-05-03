@@ -43,12 +43,12 @@ class _ItemDetailsScreenState extends State<ItemDetailsScreen> {
       body: Column(
 
         children: [
-          Image.network(widget.model!.thumbnailUrl.toString()),
+          Image.network(widget.model!.thumbnailUrl.toString(), height: 300,),
 
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: Text(
-              widget.model!.title.toString(), style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20, fontFamily: "VarelaRound"),
+              widget.model!.title.toString(), style: TextStyle(fontWeight: FontWeight.bold, fontSize: 22, fontFamily: "VarelaRound"),
             ),         ),
           Padding(
             padding: const EdgeInsets.all(8.0),
@@ -72,16 +72,18 @@ class _ItemDetailsScreenState extends State<ItemDetailsScreen> {
                 decoration: const BoxDecoration(
                   gradient: LinearGradient(
                     colors: [
-                      Color(0xffff99c8),
-                      Color(0xff023e8a),
+                      Color(0xff2ec4b6),
+                      Color(0xff2ec4b6),
                     ],
-                    begin: const FractionalOffset(0.0, 0.0),
+                    begin: const FractionalOffset(10.0, 10.0),
                     end: const FractionalOffset(1.0, 0.0),
                     stops: [0.0, 1.0],
                     tileMode: TileMode.clamp,
                   ),
+
                 ),
-                width: MediaQuery.of(context).size.width - 12,
+                width: MediaQuery.of(context).size.width - 50,
+
                 height: 50,
                 child: Center(
                   child: Text(

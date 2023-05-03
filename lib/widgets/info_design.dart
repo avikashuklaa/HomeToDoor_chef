@@ -65,11 +65,11 @@ class _InfoDesignWidgetState extends State<InfoDesignWidget> {
                     fontSize: 20,
                     fontFamily: "Varela"),
                   ),
-                  SizedBox(width: 50,),
+
                   IconButton(
                     icon: Icon(
                       Icons.delete_sharp,
-                      color: Colors.black,
+                      color: Color(0xff9a8c98),
                     ),
                     onPressed: (){
                         deleteMenu(widget.model!.menuID!);
